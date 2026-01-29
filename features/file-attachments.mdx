@@ -1,0 +1,46 @@
+---
+title: "File Attachments"
+description: "Automatically attach files from Slack to Jira issues"
+---
+
+## Overview
+
+When you create a Jira issue from a Slack thread, any files shared in that thread are automatically uploaded as attachments to the new issue.
+
+## Supported Files
+
+Ziggy handles common file types:
+
+- **Images** — PNG, JPG, GIF, SVG
+- **Documents** — PDF, Word, Excel, PowerPoint
+- **Code** — Text files, logs, JSON
+- **Screenshots** — Pasted images in Slack
+
+## How It Works
+
+1. You share files in a Slack thread
+2. When you ask Ziggy to create an issue, it detects all files in the thread
+3. Files are downloaded from Slack and uploaded to the new Jira issue
+4. Attachments appear in the issue's Attachments section
+
+## Example
+
+**Thread:**
+> User: The button is misaligned on mobile
+> User: [screenshot-1.png]
+> User: [screenshot-2.png]
+> Dev: What browser?
+> User: Safari on iOS 17
+
+**Command:**
+```
+Ziggy create a bug for this
+```
+
+**Result:** Bug created with both screenshots attached, plus repro details in the description.
+
+## Notes
+
+- File uploads happen after the issue is created (non-blocking)
+- Large files may take a moment to upload
+- Files are only attached from the specific thread, not the entire channel

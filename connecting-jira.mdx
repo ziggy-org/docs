@@ -1,0 +1,73 @@
+---
+title: "Connecting Jira"
+description: "Link your Jira Cloud instance to Ziggy"
+---
+
+## Requirements
+
+Before connecting Jira, ensure you have:
+
+- **Jira Cloud** — Ziggy works with Jira Cloud (not Jira Server or Data Center)
+- **Jira permissions** — You need permission to authorize third-party apps in your Jira instance
+
+## Connect via OAuth
+
+<Steps>
+  <Step title="Start the connection">
+    In any Slack channel, type:
+    ```
+    /ziggy connect
+    ```
+  </Step>
+
+  <Step title="Authorize in Atlassian">
+    Click the authorization link. You'll be redirected to Atlassian to grant Ziggy access.
+
+    Ziggy requests permission to:
+    - Read and write issues
+    - Read projects and issue types
+    - Upload attachments
+    - Read and write comments
+  </Step>
+
+  <Step title="Confirmation">
+    Once authorized, Ziggy will confirm the connection in Slack and start your 14-day free trial.
+  </Step>
+</Steps>
+
+## Check connection status
+
+To verify your Jira connection at any time:
+
+```
+/ziggy status
+```
+
+This shows:
+- Connection status
+- Connected Jira site
+- Default project (if set)
+- Subscription status and trial days remaining
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Authorization failed">
+    Ensure you have permission to authorize third-party apps in your Jira instance. Contact your Jira admin if needed.
+  </Accordion>
+
+  <Accordion title="Wrong Jira instance connected">
+    If you connected the wrong Jira instance, contact support@ziggy.sh to reset your connection.
+  </Accordion>
+
+  <Accordion title="Can't see my projects">
+    Ziggy can only access projects that the authorizing user has access to. Make sure you have the necessary Jira permissions.
+  </Accordion>
+</AccordionGroup>
+
+## Security
+
+- Ziggy uses OAuth 2.0 for secure authentication
+- Credentials are encrypted at rest
+- Ziggy only accesses Jira when explicitly triggered by a user mention
+- All data is scoped to your workspace — no cross-tenant access

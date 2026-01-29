@@ -1,0 +1,61 @@
+---
+title: "Issue Search"
+description: "Find existing Jira issues without leaving Slack"
+---
+
+## Overview
+
+Search your Jira backlog directly from Slack. Ziggy returns matching issues with key details so you can quickly find what you're looking for.
+
+## Basic Usage
+
+```
+Ziggy find issues about login
+```
+
+```
+Ziggy search for payment bugs
+```
+
+```
+Ziggy check if there's an issue for the API timeout
+```
+
+## Trigger Words
+
+Ziggy recognizes these search actions:
+
+- `find`
+- `search`
+- `check`
+- `look for`
+
+## Search Results
+
+Ziggy returns up to 5 matching issues with:
+
+- **Issue key** — Clickable link to Jira (e.g., PROJ-123)
+- **Summary** — Issue title
+- **Status** — Current workflow status
+- **Priority** — Issue priority level
+- **Assignee** — Who it's assigned to
+
+## Examples
+
+```
+Ziggy find open bugs in MOBILE
+```
+
+```
+Ziggy search for issues assigned to @sarah
+```
+
+```
+Ziggy check for existing issues about the checkout flow
+```
+
+## Tips
+
+- Be specific with keywords to get better results
+- Use project keys to narrow scope: `Ziggy find bugs in BACKEND`
+- Search before creating to avoid duplicates

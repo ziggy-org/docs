@@ -1,0 +1,165 @@
+---
+title: "Issue Creation"
+description: "Create well-structured Jira issues from Slack conversations"
+---
+
+## Overview
+
+Issue creation is Ziggy's core feature. Mention Ziggy in any Slack message or thread, and it will create a complete Jira issue with:
+
+- Structured summary and description
+- Appropriate issue type (Bug, Task, Story, Improvement)
+- Priority level
+- Context from the thread
+- Link back to the Slack conversation
+
+## Basic Usage
+
+Mention Ziggy with a description of what you need:
+
+```
+Ziggy create a task for the login page redesign
+```
+
+```
+Ziggy file a bug for the checkout crash
+```
+
+```
+Ziggy open a story for the new dashboard feature
+```
+
+## Trigger Words
+
+Ziggy recognizes these action words:
+
+- `create`
+- `open`
+- `file`
+- `report`
+
+## Specifying Details
+
+### Priority
+
+Include priority in your request:
+
+```
+Ziggy high priority bug: users can't reset passwords
+```
+
+```
+Ziggy create an urgent task for the deployment
+```
+
+Priority levels: Highest, High, Medium, Low, Lowest
+
+### Project
+
+Override the default project inline:
+
+```
+Ziggy in MOBILE: create a bug for the app crash
+```
+
+```
+Ziggy create a task in BACKEND for the API refactor
+```
+
+### Assignee
+
+Assign the issue during creation:
+
+```
+Ziggy create a task and assign to @sarah
+```
+
+```
+Ziggy bug for the login issue, assign to John
+```
+
+## Thread Context
+
+When you mention Ziggy in a thread, it reads:
+
+1. The root message
+2. All replies in the thread
+3. Files and images shared
+
+This context is used to:
+- Extract requirements and acceptance criteria
+- Identify reproduction steps for bugs
+- Capture decisions and constraints discussed
+
+## What Gets Created
+
+### For Bugs
+
+- **Summary**: Clear bug title
+- **Description**:
+  - Context / Background
+  - Steps to reproduce
+  - Expected vs actual behavior
+  - Environment details (if mentioned)
+- **Attachments**: Screenshots and files from the thread
+- **Slack link**: Permalink to the original conversation
+
+### For Tasks / Stories
+
+- **Summary**: Clear task title
+- **Description**:
+  - Context / Background
+  - Requirements
+  - Acceptance criteria
+  - Open questions (if any)
+- **Attachments**: Relevant files from the thread
+- **Slack link**: Permalink to the original conversation
+
+## Duplicate Detection
+
+Before creating an issue, Ziggy searches for similar existing issues. If potential duplicates are found:
+
+1. Ziggy shows you the similar issues
+2. You can choose to view them or create anyway
+3. This prevents duplicate work and keeps your backlog clean
+
+## Examples
+
+<AccordionGroup>
+  <Accordion title="Bug from a thread">
+    **Thread:**
+    > User: The app crashes when I upload a PDF
+    > Dev: What device?
+    > User: iPhone 14, iOS 17
+    > User: [screenshot.png]
+
+    **Command:**
+    ```
+    Ziggy create a bug for this
+    ```
+
+    **Result:** Bug with repro steps, device info, and screenshot attached
+  </Accordion>
+
+  <Accordion title="Feature request with priority">
+    **Command:**
+    ```
+    Ziggy high priority story: Add dark mode to the settings page. Should include toggle and respect system preferences.
+    ```
+
+    **Result:** Story with requirements and acceptance criteria, marked High priority
+  </Accordion>
+
+  <Accordion title="Task with assignee">
+    **Thread:**
+    > PM: We need to update the API docs before launch
+    > @mike can you handle this?
+
+    **Command:**
+    ```
+    Ziggy create a task and assign to @mike
+    ```
+
+    **Result:** Task assigned to Mike with context from the thread
+  </Accordion>
+</AccordionGroup>

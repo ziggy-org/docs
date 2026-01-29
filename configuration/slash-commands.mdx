@@ -1,0 +1,91 @@
+---
+title: "Slash Commands"
+description: "All available Ziggy slash commands"
+---
+
+## Overview
+
+Ziggy provides slash commands for configuration and status checks. These work in any Slack channel.
+
+## Available Commands
+
+### /ziggy connect
+
+Connect your Jira Cloud instance to Ziggy.
+
+```
+/ziggy connect
+```
+
+Opens the Jira OAuth flow. Once connected, your 14-day free trial begins.
+
+**Access:** All users
+
+---
+
+### /ziggy setup
+
+Set the workspace default Jira project.
+
+```
+/ziggy setup PROJ
+```
+
+All issues created without a specified project will use this default.
+
+**Access:** Workspace admins only
+
+---
+
+### /ziggy my-project
+
+Set your personal default Jira project.
+
+```
+/ziggy my-project MYPROJ
+```
+
+Your personal default overrides the workspace default for issues you create.
+
+**Access:** All users
+
+---
+
+### /ziggy status
+
+View connection and subscription status.
+
+```
+/ziggy status
+```
+
+Shows:
+- Jira connection status
+- Connected Jira site
+- Workspace default project
+- Your personal default project
+- Subscription status and trial days remaining
+
+**Access:** All users
+
+---
+
+### /ziggy help
+
+Show available commands and usage examples.
+
+```
+/ziggy help
+```
+
+**Access:** All users
+
+## Command Reference
+
+| Command | Description | Access |
+|---------|-------------|--------|
+| `/ziggy connect` | Connect Jira to workspace | All users |
+| `/ziggy setup [PROJECT]` | Set workspace default project | Admin only |
+| `/ziggy my-project [PROJECT]` | Set personal default project | All users |
+| `/ziggy status` | View connection and subscription | All users |
+| `/ziggy help` | Show help message | All users |

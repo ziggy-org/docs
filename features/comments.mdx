@@ -1,0 +1,64 @@
+---
+title: "Add Comments"
+description: "Add comments to Jira issues from Slack"
+---
+
+## Overview
+
+Add comments to existing Jira issues without leaving Slack. Great for adding updates, context, or decisions from ongoing conversations.
+
+## Basic Usage
+
+```
+Ziggy add comment to PROJ-123: testing is complete
+```
+
+```
+Ziggy comment on BACKEND-456: reviewed and approved
+```
+
+```
+Ziggy note on MOBILE-789 that the fix was deployed to production
+```
+
+## Trigger Words
+
+- `add comment to`
+- `comment on`
+- `note on`
+
+## How It Works
+
+1. Ziggy extracts the issue key and comment text
+2. The comment is formatted in Atlassian Document Format (ADF)
+3. Comment is added to the Jira issue
+4. Ziggy confirms the comment was added
+
+## Examples
+
+<AccordionGroup>
+  <Accordion title="Status update">
+    ```
+    Ziggy comment on PROJ-123: Blocked waiting for API changes. ETA next week.
+    ```
+  </Accordion>
+
+  <Accordion title="Decision from thread">
+    After a Slack discussion about approach:
+    ```
+    Ziggy add comment to PROJ-456: Decided to use WebSockets instead of polling per discussion with the team.
+    ```
+  </Accordion>
+
+  <Accordion title="Deployment note">
+    ```
+    Ziggy note on PROJ-789 that this was deployed to staging for QA
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Tips
+
+- Keep comments concise but include enough context
+- Reference the Slack thread if the comment needs more background
+- Use comments to keep stakeholders updated on progress

@@ -1,0 +1,41 @@
+---
+title: "Done Notifications"
+description: "Get notified in Slack when issues are resolved"
+---
+
+## Overview
+
+When a Jira issue created by Ziggy is resolved, Ziggy posts a notification back to the original Slack thread. This closes the loop and keeps everyone informed.
+
+## How It Works
+
+1. You create a Jira issue via Ziggy in a Slack thread
+2. Someone resolves the issue in Jira (moves to "Done" or similar)
+3. Ziggy detects the status change via webhook
+4. A notification is posted to the original Slack thread
+
+## Notification Message
+
+When an issue is resolved, you'll see:
+
+> ✅ **PROJ-123** is resolved. One less thing to worry about.
+>
+> [View in Jira]
+
+The notification includes:
+- Issue key with link to Jira
+- "View in Jira" button for quick access
+
+## Supported Statuses
+
+Ziggy sends notifications when issues transition to "Done" status. This works with:
+
+- Standard Jira "Done" status
+- Custom "Done" statuses in your workflow
+- Any status in the "Done" category
+
+## Notes
+
+- Notifications only appear for issues created through Ziggy
+- The notification goes to the exact thread where the issue was created
+- Team members following the thread will see the update
