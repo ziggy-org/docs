@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Ziggy",
   "colors": {
-    "primary": "#6366F1",
-    "light": "#818CF8",
-    "dark": "#4F46E5"
+    "primary": "#5E1DB8",
+    "light": "#7C3AED",
+    "dark": "#3F007D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -59,7 +59,8 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "height": 40
   },
   "navbar": {
     "links": [
