@@ -5,46 +5,23 @@ description: "Configure default Jira projects for your workspace and users"
 
 ## Overview
 
-Ziggy uses a project resolution system to determine which Jira project to create issues in. You can set defaults at the workspace and personal level.
+Ziggy uses a project resolution system to determine which Jira project to create issues in. You can set defaults using the **Home** tab in Slack.
 
 ## Project Resolution Priority
 
 When you create an issue, Ziggy determines the project in this order:
 
-1. **Inline specification** — `Ziggy in PROJ: create a task`
-2. **Personal default** — Set via `/ziggy my-project`
-3. **Workspace default** — Set via `/ziggy setup`
-4. **Most active project** — Falls back to the most recently used project
+1. **Inline specification** - `Ziggy in PROJ: create a task`
+2. **Default project** - Set via the Home tab
+3. **Most active project** - Falls back to the most recently used project
 
-## Setting Workspace Default
+## Setting Default Project
 
-Workspace admins can set a default project for all users:
-
-```
-/ziggy setup PROJ
-```
-
-This is useful when:
-- Your team primarily works in one project
-- You want a consistent default for new team members
-- You want to ensure issues go to the right place by default
-
-## Setting Personal Default
-
-Each user can set their own default:
-
-```
-/ziggy my-project MYPROJ
-```
-
-Personal defaults are useful when:
-- Different team members work on different projects
-- You want to override the workspace default for your own issues
-- You frequently create issues in a specific project
+Open the Ziggy **Home** tab in Slack and configure your default project there. This is where you manage all project settings.
 
 ## Inline Override
 
-Always specify the project in your message to override any defaults:
+Specify the project in your message to override any defaults:
 
 ```
 Ziggy in BACKEND: create a bug for the API timeout
@@ -60,20 +37,11 @@ Ziggy create a task in MOBILE for the app crash
 
 A small team all working on the same project:
 
-1. Admin sets workspace default: `/ziggy setup ACME`
+1. Set default project to ACME in the Home tab
 2. All team members create issues without specifying project
 3. All issues go to ACME
 
-### Scenario 2: Multi-project organization
-
-A larger org with multiple teams:
-
-1. Admin sets workspace default: `/ziggy setup GENERAL`
-2. Frontend team sets personal defaults: `/ziggy my-project FRONTEND`
-3. Backend team sets personal defaults: `/ziggy my-project BACKEND`
-4. Issues automatically route to the right project based on who creates them
-
-### Scenario 3: Cross-team collaboration
+### Scenario 2: Cross-team collaboration
 
 When creating an issue for another team:
 
@@ -91,4 +59,4 @@ Check your current project configuration:
 /ziggy status
 ```
 
-Shows both workspace default and your personal default.
+Or open the Ziggy **Home** tab to see and change your defaults.
