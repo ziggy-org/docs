@@ -18,15 +18,15 @@ Issue creation is Ziggy's core feature. Mention Ziggy in any Slack message or th
 Mention Ziggy with a description of what you need:
 
 ```
-Ziggy create a task for the login page redesign
+@Ziggy the checkout page is broken on mobile, can you file a bug?
 ```
 
 ```
-Ziggy file a bug for the checkout crash
+@Ziggy we need a task to update the onboarding flow
 ```
 
 ```
-Ziggy open a story for the new dashboard feature
+@Ziggy can you open a story for the new dashboard Sarah mentioned?
 ```
 
 ## Trigger Words
@@ -42,14 +42,14 @@ Ziggy recognizes these action words:
 
 ### Priority
 
-Include priority in your request:
+Include priority naturally:
 
 ```
-Ziggy high priority bug: users can't reset passwords
+@Ziggy this is urgent - users can't reset their passwords
 ```
 
 ```
-Ziggy create an urgent task for the deployment
+@Ziggy low priority but we should track it - the footer link is wrong
 ```
 
 Priority levels: Highest, High, Medium, Low, Lowest
@@ -59,11 +59,11 @@ Priority levels: Highest, High, Medium, Low, Lowest
 Override the default project inline:
 
 ```
-Ziggy in MOBILE: create a bug for the app crash
+@Ziggy bug in MOBILE - the app crashes when you upload a photo
 ```
 
 ```
-Ziggy create a task in BACKEND for the API refactor
+@Ziggy can you create a task in BACKEND for the API refactor?
 ```
 
 ### Assignee
@@ -71,11 +71,11 @@ Ziggy create a task in BACKEND for the API refactor
 Assign the issue during creation:
 
 ```
-Ziggy create a task and assign to @sarah
+@Ziggy create a task for this and assign it to @sarah
 ```
 
 ```
-Ziggy bug for the login issue, assign to John
+@Ziggy this is a bug for John - the login page is timing out
 ```
 
 ## Thread Context
@@ -95,25 +95,25 @@ This context is used to:
 
 ### For Bugs
 
-- **Summary**: Clear bug title
+- **Summary** - Clear bug title
 - **Description**:
   - Context / Background
   - Steps to reproduce
   - Expected vs actual behavior
   - Environment details (if mentioned)
-- **Attachments**: Screenshots and files from the thread
-- **Slack link**: Permalink to the original conversation
+- **Attachments** - Screenshots and files from the thread
+- **Slack link** - Permalink to the original conversation
 
 ### For Tasks / Stories
 
-- **Summary**: Clear task title
+- **Summary** - Clear task title
 - **Description**:
   - Context / Background
   - Requirements
   - Acceptance criteria
   - Open questions (if any)
-- **Attachments**: Relevant files from the thread
-- **Slack link**: Permalink to the original conversation
+- **Attachments** - Relevant files from the thread
+- **Slack link** - Permalink to the original conversation
 
 ## Duplicate Detection
 
@@ -133,18 +133,18 @@ Before creating an issue, Ziggy searches for similar existing issues. If potenti
     > User: iPhone 14, iOS 17
     > User: [screenshot.png]
 
-    **Command:**
+    **Message:**
     ```
-    Ziggy create a bug for this
+    @Ziggy can you file a bug for this? seems like it's only happening on iOS
     ```
 
     **Result:** Bug with repro steps, device info, and screenshot attached
   </Accordion>
 
   <Accordion title="Feature request with priority">
-    **Command:**
+    **Message:**
     ```
-    Ziggy high priority story: Add dark mode to the settings page. Should include toggle and respect system preferences.
+    @Ziggy we really need dark mode on the settings page - should include a toggle and respect system preferences. high priority
     ```
 
     **Result:** Story with requirements and acceptance criteria, marked High priority
@@ -155,9 +155,9 @@ Before creating an issue, Ziggy searches for similar existing issues. If potenti
     > PM: We need to update the API docs before launch
     > @mike can you handle this?
 
-    **Command:**
+    **Message:**
     ```
-    Ziggy create a task and assign to @mike
+    @Ziggy create a task for this and assign to @mike
     ```
 
     **Result:** Task assigned to Mike with context from the thread

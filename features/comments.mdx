@@ -10,15 +10,15 @@ Add comments to existing Jira issues without leaving Slack. Great for adding upd
 ## Basic Usage
 
 ```
-Ziggy add comment to PROJ-123: testing is complete
+@Ziggy add a comment to PROJ-123 - testing is done, all good
 ```
 
 ```
-Ziggy comment on BACKEND-456: reviewed and approved
+@Ziggy comment on BACKEND-456 saying we reviewed this and it's approved
 ```
 
 ```
-Ziggy note on MOBILE-789 that the fix was deployed to production
+@Ziggy note on MOBILE-789 that the fix went out to production
 ```
 
 ## Trigger Words
@@ -39,20 +39,20 @@ Ziggy note on MOBILE-789 that the fix was deployed to production
 <AccordionGroup>
   <Accordion title="Status update">
     ```
-    Ziggy comment on PROJ-123: Blocked waiting for API changes. ETA next week.
+    @Ziggy comment on PROJ-123 - we're blocked waiting for the API changes, should be unblocked next week
     ```
   </Accordion>
 
   <Accordion title="Decision from thread">
     After a Slack discussion about approach:
     ```
-    Ziggy add comment to PROJ-456: Decided to use WebSockets instead of polling per discussion with the team.
+    @Ziggy add a comment to PROJ-456 - team decided to go with WebSockets instead of polling
     ```
   </Accordion>
 
   <Accordion title="Deployment note">
     ```
-    Ziggy note on PROJ-789 that this was deployed to staging for QA
+    @Ziggy note on PROJ-789 that this just went to staging for QA
     ```
   </Accordion>
 </AccordionGroup>

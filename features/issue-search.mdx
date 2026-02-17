@@ -10,15 +10,15 @@ Search your Jira backlog directly from Slack. Ziggy returns matching issues with
 ## Basic Usage
 
 ```
-Ziggy find issues about login
+@Ziggy are there any issues about the login page?
 ```
 
 ```
-Ziggy search for payment bugs
+@Ziggy search for payment bugs
 ```
 
 ```
-Ziggy check if there's an issue for the API timeout
+@Ziggy check if someone already filed something about the API timeout
 ```
 
 ## Trigger Words
@@ -34,28 +34,28 @@ Ziggy recognizes these search actions:
 
 Ziggy returns up to 5 matching issues with:
 
-- **Issue key** — Clickable link to Jira (e.g., PROJ-123)
-- **Summary** — Issue title
-- **Status** — Current workflow status
-- **Priority** — Issue priority level
-- **Assignee** — Who it's assigned to
+- **Issue key** - Clickable link to Jira (e.g., PROJ-123)
+- **Summary** - Issue title
+- **Status** - Current workflow status
+- **Priority** - Issue priority level
+- **Assignee** - Who it's assigned to
 
 ## Examples
 
 ```
-Ziggy find open bugs in MOBILE
+@Ziggy find any open bugs in MOBILE
 ```
 
 ```
-Ziggy search for issues assigned to @sarah
+@Ziggy what's assigned to @sarah right now?
 ```
 
 ```
-Ziggy check for existing issues about the checkout flow
+@Ziggy check if there's already something about the checkout flow
 ```
 
 ## Tips
 
 - Be specific with keywords to get better results
-- Use project keys to narrow scope: `Ziggy find bugs in BACKEND`
+- Use project keys to narrow scope: `@Ziggy find bugs in BACKEND`
 - Search before creating to avoid duplicates

@@ -10,15 +10,15 @@ Assign or reassign existing Jira issues without opening Jira. Just mention the i
 ## Basic Usage
 
 ```
-Ziggy assign PROJ-123 to @john
+@Ziggy assign PROJ-123 to @john
 ```
 
 ```
-Ziggy reassign BACKEND-456 to Sarah
+@Ziggy can you reassign BACKEND-456 to Sarah?
 ```
 
 ```
-Ziggy give MOBILE-789 to @mike
+@Ziggy give MOBILE-789 to @mike, he's taking over
 ```
 
 ## Trigger Words
@@ -38,24 +38,24 @@ Ziggy give MOBILE-789 to @mike
 
 Ziggy matches users in this order:
 
-1. **Slack mention** (`@john`) — Uses the linked email to find the Jira user
-2. **Name match** — Searches Jira users by display name
+1. **Slack mention** (`@john`) - Uses the linked email to find the Jira user
+2. **Name match** - Searches Jira users by display name
 
 <Tip>Using Slack mentions is more reliable since it matches by email address.</Tip>
 
 ## Examples
 
 ```
-Ziggy assign PROJ-123 to @sarah
+@Ziggy assign PROJ-123 to @sarah
 ```
-→ Assigns PROJ-123 to Sarah (matched by Slack email)
+> Assigns PROJ-123 to Sarah (matched by Slack email)
 
 ```
-Ziggy reassign BACKEND-456 to Mike Chen
+@Ziggy reassign BACKEND-456 to Mike Chen
 ```
-→ Searches for "Mike Chen" in Jira users and assigns
+> Searches for "Mike Chen" in Jira users and assigns
 
 ```
-Ziggy give MOBILE-789 to the mobile team lead
+@Ziggy give MOBILE-789 to the mobile team lead
 ```
-→ Ziggy will ask for clarification if the name is ambiguous
+> Ziggy will ask for clarification if the name is ambiguous
